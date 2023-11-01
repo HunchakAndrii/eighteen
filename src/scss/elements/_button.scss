@@ -1,0 +1,141 @@
+.btn {
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: 0.3s all ease;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+@each $color, $value in $ui-dark {
+  .btn-#{$color} {
+    color: white;
+    background: $value;
+
+    &:hover,
+    &:focus {
+      background: darken($value, 10%);
+    }
+
+    &:active {
+      background: darken($value, 15%);
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 4px rgba(darken($value, 15%), 0.5);
+    }
+  }
+}
+
+@each $color, $value in $ui-light {
+  .btn-#{$color} {
+    color: black;
+    background: $value;
+
+    &:hover,
+    &:focus {
+      background: lighten($value, 10%);
+    }
+
+    &:active {
+      background: lighten($value, 15%);
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 4px rgba(lighten($value, 15%), 0.5);
+    }
+  }
+}
+
+.btn-light {
+  color: black;
+}
+
+.btn-dark {
+  color: white;
+}
+
+@each $color, $value in $ui-dark {
+  .btn-outline-#{$color} {
+    color: $value;
+    background: transparent;
+    border: 1px solid $value;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      color: white;
+      background: $value;
+    }
+
+    &:active:not(:disabled) {
+      background: darken($value, 15%);
+    }
+
+    &:focus-visible:not(:disabled) {
+      box-shadow: 0 0 0 4px rgba(darken($value, 10%), 0.5);
+    }
+  }
+}
+
+@each $color, $value in $ui-light {
+  .btn-outline-#{$color} {
+    color: $value;
+    background: transparent;
+    border: 1px solid $value;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      color: black;
+      background: $value;
+    }
+
+    &:active:not(:disabled) {
+      background: lighten($value, 10%);
+    }
+
+    &:focus-visible:not(:disabled) {
+      box-shadow: 0 0 0 4px rgba(lighten($value, 10%), 0.5);
+    }
+  }
+}
+
+.btn-outline-light {
+  border: 1px solid black;
+  color: black;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    color: black;
+  }
+}
+
+.btn-outline-dark {
+  border: 1px solid white;
+  color: white;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    color: white;
+  }
+}
+
+.btn-lg {
+  padding: 8px 16px;
+  font-size: 20px;
+}
+
+.btn-sm {
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.btn {
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
