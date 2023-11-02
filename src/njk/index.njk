@@ -1,20 +1,29 @@
 {% extends "main.njk" %} {% block content %}
 
-<section class="section-base">
+<section class="first-section">
   <div class="container">
-    <div class="section-base__wrap">
-      <div class="section-base__content">
-        <h1 class="section-base__title">Index page</h1>
-        <p class="section-base__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi rerum
-          iure, laborum minus, ab labore sint, asperiores quia voluptatum alias
-          deserunt sunt libero quam officia ipsam inventore fuga soluta commodi.
+    <div class="first-section__wrap">
+      <div class="first-section__content">
+        <h1 class="title-h1 first-section__title">
+          Always Track & Analyze Your Business Statistics To Succeed.
+        </h1>
+        <p class="text-p1 first-section__text">
+          A better way to manage your sales, team, clients & marketing — on a
+          single platform. Powerful, affordable & easy.
         </p>
-        <button class="btn btn-dark section-base__btn">Main button</button>
+        <form class="form" action="post">
+          <input class="mail" type="email" placeholder="enter your email">
+          <button class="btn first-section__btn">Get started</button>
+        </form>
+        <div class="payments__link">
+          <a href="#"><img src="img/m_mastercard.svg" alt=""></a>
+          <a href="#"><img src="img/m_paypall.svg" alt=""></a>
+          <a href="#"><img src="img/m_visa.svg" alt=""></a>
+        </div>
       </div>
 
-      <div class="section-base__image">
-        <div class="section-base__img"></div>
+      <div class="first-section__image">
+        <img class="first-section__img" src="img/Illustration_1.svg" alt="">
       </div>
     </div>
   </div>

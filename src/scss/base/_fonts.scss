@@ -1,36 +1,43 @@
 // Inlcude fonts
-@include font-face('Circe', 'Circe-Regular', 400);
-@include font-face('Circe', 'Circe-Bold', 700);
+@include font-face('NeueMachina', 'NeueMachina-Regular', 400);
+@include font-face('NeueMachina', 'NeueMachina-Ultrabold', 800);
 
 // Main Fonts
 .title-h1 {
-  font-size: 30px;
-  line-height: 1.2;
+  font-size: 28px;
+  line-height: 80px;
 
-  @media (min-width: $xl) {
-    font-size: 48px;
+  @media (min-width: 840px) {
+    font-size: 70px;
   }
 }
 
 .title-h2 {
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.2;
 
   @media (min-width: $xl) {
-    font-size: 32px;
+    font-size: 69px;
   }
 }
 
 .title-h3 {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.2;
+  font-weight: 800;
 
   @media (min-width: $xl) {
     font-size: 28px;
+    font-weight: 400;
   }
 }
 
 .text-p1 {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.text-p2 {
+  font-size: 20px;
+  line-height: 28px;
 }

@@ -1,3 +1,45 @@
 .index {
   padding: 40px;
 } 
+
+.first-section {
+  margin-top: 80px;
+  margin-bottom: 200px;
+}
+
+.first-section__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+}
+
+.first-section__content {
+}
+
+.first-section__title {
+}
+
+.first-section__text {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+}
+
+.mail {
+  flex: 1 1 auto;
+}
+
+.first-section__btn {
+  flex: 1 1 478px;
+}
+
+.first-section__image {
+  width: 100%;
+}
+
+.first-section__img {
+  
+}
