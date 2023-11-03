@@ -4,6 +4,13 @@ body {
   color: $black;
   font-size: 18px;
   line-height: 26px;
+}
+
+body.active {
+  overflow: hidden;
+}
+
+.burger.active body {
   overflow: hidden;
 }
 

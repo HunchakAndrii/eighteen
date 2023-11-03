@@ -7,7 +7,7 @@
   font-size: 28px;
   line-height: 80px;
 
-  @media (min-width: 840px) {
+  @media (min-width: $xl) {
     font-size: 70px;
   }
 }
@@ -17,7 +17,7 @@
   line-height: 1.2;
 
   @media (min-width: $xl) {
-    font-size: 69px;
+    font-size: 60px;
   }
 }
 
@@ -40,4 +40,16 @@
 .text-p2 {
   font-size: 20px;
   line-height: 28px;
+}
+
+.sub-title {
+  color: $black;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 26px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border: 1px solid $black;
+  background: $white;
 }
