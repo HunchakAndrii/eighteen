@@ -1,12 +1,12 @@
-import Lenis from '@studio-freight/lenis'
 
+import Lenis from '@studio-freight/lenis'
 
 const burger = document.querySelector('.burger')
 const mobileMenu = document.querySelector('.mobile-menu')
 const smoke = document.querySelector('.smoke')
 const body = document.body
 
-if(burger) {
+if (burger) {
   burger.addEventListener('click', e => {
     e.preventDefault()
 
@@ -17,7 +17,6 @@ if(burger) {
   })
 }
 
-
 const lenis = new Lenis()
 
 function raf(time) {
@@ -25,16 +24,13 @@ function raf(time) {
   requestAnimationFrame(raf)
 }
 
-requestAnimationFrame(raf) 
-
-
+requestAnimationFrame(raf)
 
 var whiteSmokeItemStart = document.querySelector('#whitesmoke_2_')
 var whiteSmokeItemEnd = document.querySelector('#whitesmoke_56_')
 var whiteSmokeTlm = document.querySelector('#SMOKE1')
 
 whiteSmokeTlm = new gsap.timeline()
-
 
 whiteSmokeItemStart = {
   y: 0,
@@ -57,9 +53,7 @@ whiteSmokeItemEnd = {
   ease: 'none',
 }
 
-
 whiteSmokeTlm
   .fromTo('#whitesmokes circle', whiteSmokeItemStart, whiteSmokeItemEnd, 0)
   .seek(100)
-
 

@@ -6,8 +6,10 @@
 .title-h1 {
   font-size: 28px;
   line-height: 80px;
+  letter-spacing: -4px;
+  line-height: 80px;
 
-  @media (min-width: $xl) {
+  @media (min-width: 980px) {
     font-size: 70px;
   }
 }
@@ -42,7 +44,7 @@
   line-height: 28px;
 }
 
-.sub-title {
+h4 {
   color: $black;
   text-align: center;
   font-size: 14px;

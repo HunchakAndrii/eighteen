@@ -9,31 +9,35 @@
 
 .first-section__wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 120px;
-}
+  grid-template-columns: 1fr auto;
 
-.first-section__content {
+  @media (max-width: 1300px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .first-section__title {
+  max-width: 741px;
 }
 
 .first-section__text {
   margin-top: 20px;
   margin-bottom: 40px;
+  max-width: 565px;
 }
 
 .form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  max-width: 478px;
 }
 
 .mail {
-  flex: 1 1 auto;
+ border-radius: 6px 0px 0px 6px !important;
 }
 
 .first-section__btn {
-  flex: 1 1 478px;
+
 }
 
 .payments__link {
@@ -41,11 +45,11 @@
 }
 
 .first-section__image {
-  width: 100%;
+  max-width: 550px;
 }
 
 .first-section__img {
-  
+  width: 100%;
 }
 
 
