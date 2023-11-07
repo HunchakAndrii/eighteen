@@ -1,5 +1,7 @@
 
 import Lenis from '@studio-freight/lenis'
+import gsap from 'gsap'
+import form from './form.js'
 
 const burger = document.querySelector('.burger')
 const mobileMenu = document.querySelector('.mobile-menu')
@@ -57,3 +59,4 @@ whiteSmokeTlm
   .fromTo('#whitesmokes circle', whiteSmokeItemStart, whiteSmokeItemEnd, 0)
   .seek(100)
 
+form()

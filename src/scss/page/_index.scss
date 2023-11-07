@@ -276,9 +276,6 @@
   }
 }
 
-.pricing__img {
-}
-
 .pricing__content {
   display: flex;
   flex-direction: column;
@@ -308,3 +305,113 @@
 .text__pricing {
   max-width: 500px;
 }
+
+.pricing__cards {
+  display: grid;
+  gap: 16px;
+  margin-top: 60px;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1600px) {
+    gap: 100px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 40px;
+  border: 1px solid $black;
+  background: $white;
+  transition: transform 0.3s ease;
+
+  &:nth-child(2) {
+    color: $white;
+    background-color: $black;
+    button {
+      color: $black;
+      background-color: $white;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.015);
+  }
+
+  &:not(:hover) {
+    transform: none;
+    transition: transform 0.3s ease;
+  }
+
+  @media (min-width: 600px) and (max-width: 991px) {
+    &:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      width: calc(50% - 8px);
+      margin: 0 auto;
+    }
+  }
+}
+
+.card__price {
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: -4px;
+  position: relative;
+
+  & sup,
+  & sub {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+  }
+
+  & sup {
+    transform: translateY(-11px);
+  }
+
+  & sub {
+    transform: translateY(-12px);
+  }
+}
+
+.card__text {
+  margin-top: 20px;
+}
+
+.card__list {
+  margin: 60px 0px;
+  padding-left: 24px;
+}
+
+.card__list li {
+  list-style-type: square;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &::marker {
+    font-size: 24px;
+  }
+}
+
+.card__btn {
+  margin-top: auto;
+}
+
+.form-result {
+  display: none;
+}
+
+
+//....................Faqs.....................//
+
+

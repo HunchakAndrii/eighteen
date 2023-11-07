@@ -1,4 +1,12 @@
-{% extends "main.njk" %} {% block content %}
+{% extends "main.njk" %} {% block content %} {% set posts = [ { price: 49, text:
+"A pay-once license, just for you", list: ['The Mac app — yours to keep',
+'Beautiful White_level', 'One year of saving to Cloud'] }, { price: 99, text:
+"Pro account, just for you", list: ['The Mac app — yours to keep', 'One year of
+Mac app updates', 'One year of saving to Cloud', 'A personal Cloud workspace',
+'All tools, just for you'] }, { price: 299, text: "A subscription for the whole
+team", list: ['Access to the Mac app for all', 'A shared Cloud workspace', 'Free
+Cloud access for unlim', 'Easy team management', 'No license key required'] } ]
+%}
 
 <section class="first-section">
   <div class="container">
@@ -11,10 +19,18 @@
           A better way to manage your sales, team, clients & marketing — on a
           single platform. Powerful, affordable & easy.
         </p>
-        <form class="form" action="post">
-          <input class="mail" type="email" placeholder="enter your email" />
-          <button class="btn first-section__btn">Get started</button>
+        <form class="form" novalidate>
+          <input
+            name="email"
+            class="mail"
+            type="email"
+            placeholder="enter your email"
+          />
+          <button type="submit" class="btn first-section__btn">
+            Get started
+          </button>
         </form>
+        <p class="form-result">Success</p>
         <div class="payments__link">
           <a href="#"><img src="img/m_mastercard.svg" alt="" /></a>
           <a href="#"><img src="img/m_paypall.svg" alt="" /></a>
@@ -151,7 +167,41 @@
         </p>
       </div>
     </div>
-    <div class="pricing__cards"></div>
+    <div class="pricing__cards">
+      {% for post in posts %}
+      <div class="card">
+        <h5 class="card__price">
+          <sup>$</sup>{{ post.price }} <sub>per month</sub>
+        </h5>
+        <p class="card__text">{{ post.text }}</p>
+        <ul class="card__list">
+          {% for text in post.list %}
+          <li>{{ text }}</li>
+          {% endfor %}
+        </ul>
+        <button class="btn card__btn">Join</button>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="faqs">
+  <div class="container">
+    <div class="faqs__wrap">
+      <div class="faqs__content">
+        <h4 class="title-h4 sub-title__faqs">Faqs</h4>
+        <h2 class="title-h2 title__faqs">Common Questions.</h2>
+        <p class="text-p1 text__faqs">
+          The online form also provides links to a set of frequently asked
+          questions, other information materials related to the financial
+          disclosure programme.
+        </p>
+      </div>
+      <div class="faqs__image">
+        <img class="faqs__img" src="img/Illustration_5.svg" alt="" />
+      </div>
+    </div>
   </div>
 </section>
 
