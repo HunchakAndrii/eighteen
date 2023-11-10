@@ -1,7 +1,11 @@
-
 import Lenis from '@studio-freight/lenis'
 import gsap from 'gsap'
-import form from './form.js'
+// import form from './form.js'
+
+import ScrollTrigger from 'gsap/ScrollTrigger.js'
+// import ScrollTrigger from 'gsap/ScrollTrigger.js'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const burger = document.querySelector('.burger')
 const mobileMenu = document.querySelector('.mobile-menu')
@@ -59,4 +63,28 @@ whiteSmokeTlm
   .fromTo('#whitesmokes circle', whiteSmokeItemStart, whiteSmokeItemEnd, 0)
   .seek(100)
 
-form()
+// form()
+
+ScrollTrigger.create({})
+
+// document.querySelectorAll('.ui .btn').forEach(item => {
+//   ScrollTrigger.create({
+//     trigger: item,
+//     animation: gsap.from(item, {
+//       opacity: 0,
+//       y: 50,
+//     }),
+//   })
+// })
+
+const tl = gsap.timeline()
+
+document.querySelectorAll('p, h1, h2, h3, h4, h5, li').forEach(i => {
+  ScrollTrigger.create({
+    trigger: i,
+    animation: gsap.from(i, {
+      opacity: 0,
+      y: 100
+    })
+  })
+})
