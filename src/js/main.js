@@ -88,3 +88,32 @@ document.querySelectorAll('p, h1, h2, h3, h4, h5, li').forEach(i => {
     })
   })
 })
+
+
+//..............................acordion.............................//
+
+// const accordionTitle = document.querySelectorAll('.accordion-item')
+// const accordionText = document.querySelectorAll('.accordion-item__text')
+
+// if (accordionTitle) {
+//   accordionTitle.addEventListener('click', e => {
+//     e.preventDefault()
+
+//     accordionTitle.classList.toggle('active')
+//     accordionText.classList.toggle('active')
+//   })
+// }
+
+const accordionItem = document.querySelectorAll('.accordion-item')
+const accordionTexts = document.querySelectorAll('.accordion-item__text')
+const accordionTitle = document.querySelectorAll('.accordion-item__title')
+
+accordionItem.forEach((accordionItem, index) => {
+  accordionItem.addEventListener('click', e => {
+    e.preventDefault()
+
+    accordionItem.classList.toggle('active')
+    accordionTexts[index].classList.toggle('active')
+    accordionTitle[index].classList.toggle('active')
+  })
+})

@@ -411,7 +411,70 @@
   display: none;
 }
 
-
 //....................Faqs.....................//
 
+.faqs {
+  margin-bottom: 200px;
 
+  @media (max-width: 1100px) {
+    margin-bottom: 100px;
+  }
+}
+
+.faqs__wrap {
+  display: grid;
+  grid-template-columns: 840px 1fr;
+}
+
+.title__faqs {
+  margin-bottom: 30px;
+}
+
+.text__faqs {
+  margin-bottom: 80px;
+}
+
+.accordion {
+}
+
+.accordion-item {
+  padding: 20px 0px;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid $black;    
+  }
+}
+
+
+
+.accordion-item__title {
+  position: relative;
+
+  & span {
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    background-color: $black;
+    top: 50%;
+    left: calc(100% - 22px);
+    transition: all 0.2s ease;
+  } 
+
+  &.active span {
+    &:nth-child(2) {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.accordion-item__text {
+  height: 0;
+  display: none;
+}
+
+.accordion-item__text.active {
+  height: auto;
+  display: block;
+  margin-top: 20px;
+}
