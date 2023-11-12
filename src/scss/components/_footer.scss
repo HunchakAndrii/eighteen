@@ -177,13 +177,20 @@
   display: grid;
   grid-template-columns: 1fr 200px;
   max-width: 478px;
-  margin-top: 20px;
 
   @media (max-width: 420px) {
     grid-template-columns: 1fr 130px;
   }
+
+  @media (max-width: 980px) {
+    margin-top: 20px;
+  }
 }
 
 .footer__text {
-  text-align: center;
+  text-align: left;
+
+  @media (max-width: 980px) {
+    text-align: center;
+  }
 }

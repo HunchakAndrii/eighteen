@@ -79,15 +79,27 @@ ScrollTrigger.create({})
 
 const tl = gsap.timeline()
 
-document.querySelectorAll('p, h1, h2, h3, h4, h5, li').forEach(i => {
+// document.querySelectorAll('p, h1, h2, h3, h4, h5, li').forEach(i => {
+//   ScrollTrigger.create({
+//     trigger: i,
+//     animation: gsap.from(i, {
+//       opacity: 0,
+//       y: 100
+//     })
+//   })
+// })
+
+document.querySelectorAll('section, p, h1, h2, h3, h4, h5, li').forEach(i => {
   ScrollTrigger.create({
     trigger: i,
     animation: gsap.from(i, {
       opacity: 0,
-      y: 100
-    })
+      y: 100,
+    }),
   })
 })
+
+
 
 
 //..............................acordion.............................//
@@ -113,3 +125,17 @@ accordionItems.forEach((accordionItem, index) => {
     accordionTitles[index].classList.toggle('active')
   })
 })
+
+
+
+//......................scroll............................//
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+      })
+    })
+  })

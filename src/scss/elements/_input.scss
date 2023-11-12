@@ -11,7 +11,7 @@ input[type=tel] {
   color: $black;
   background-color: $white;
   border: 1px solid #dee2e6;
-  border-radius: 6px;
+  border-radius: 6px 0px 0px 6px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   &:focus,
