@@ -1,5 +1,5 @@
 input[type=text],
-input[type=email],
+input[class=email], // aaaaaaaaaa Dima ! .........//
 input[type=password],
 input[type=tel] {
   display: block;
@@ -12,6 +12,28 @@ input[type=tel] {
   background-color: $white;
   border: 1px solid #dee2e6;
   border-radius: 6px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(rgb(73, 75, 78), 0.25);
+    border-color: #55575a;
+  }
+}
+
+
+.footer__mail {
+  display: block;
+  width: 100%;  
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $white;
+  background-color: $black;
+  border: 1px solid #dee2e6;
+  border-radius: 6px 0px 0px 6px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   &:focus,
